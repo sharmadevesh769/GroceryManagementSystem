@@ -1,0 +1,91 @@
+<div class="outer">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <span class="navbar-brand">{{ title }}</span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse d-flex flex-row justify-content-between"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active fa fs-4" aria-current="page" routerLink=""
+              >Home</a
+            >
+          </li>
+          <li class="nav-item fa" *ngIf="loggedin && role === 'Buyer'">
+            <a
+              class="fa nav-link active fs-5"
+              aria-current="page"
+              routerLink="/myorder"
+              >My Orders</a
+            >
+          </li>
+          <li class="nav-item fa" *ngIf=" loggedin && role === 'Seller'">
+            <a
+              class="fa nav-link active fs-5"
+              aria-current="page"
+              routerLink="/addProduct"
+              >Add Product</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li *ngIf="loggedin" class="nav-item">
+            <a
+              class="nav-link fa text-uppercase text-light fs-4"
+              aria-current="page"
+              >{{ name }}</a
+            >
+          </li>
+          <a
+            *ngIf="loggedin===false"
+            class="fa nav-link text-light"
+            routerLink="/login"
+
+            >Login</a
+          >
+
+          <li *ngIf="loggedin && role=== 'Buyer'" class="m-2">
+            <a
+              class="fa fa-shopping-cart text-light fs-4"
+              aria-hidden="true"
+              routerLink="/shoppingcart"
+            >
+              Shopping Cart</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-danger fa"
+              *ngIf="loggedin===true"
+              (click)="logout()"
+              >Logout</a
+            >
+            <a
+            *ngIf="loggedin===false"
+            class="fa nav-link text-light"
+            routerLink="registration"
+            >Register</a
+          >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="router-outlet">
+  <router-outlet></router-outlet>
+</div>
+<lib-ng-toast></lib-ng-toast>

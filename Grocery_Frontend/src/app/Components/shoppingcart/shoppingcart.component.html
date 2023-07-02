@@ -1,0 +1,156 @@
+<div class="outer">
+  <!-- <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <span class="navbar-brand fa fs-4">{{ title }}</span>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="collapse navbar-collapse d-flex flex-row justify-content-between"
+        id="navbarNav"
+      >
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="fa nav-link active fs-5" routerLink="">Home</a>
+          </li>
+          <li class="nav-item" *ngIf="role === 'Seller'">
+            <a
+              class="fa nav-link active fs-5"
+              aria-current="page"
+              routerLink="/addProduct"
+              >Add Product</a
+            >
+          </li>
+          <li class="nav-item" *ngIf="role === 'Buyer'">
+            <a
+              class="fa nav-link active fs-5"
+              aria-current="page"
+              routerLink="/myorder"
+              >My Orders</a
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav d-flex flex-row">
+          <li class="nav-item">
+            <span *ngIf="loggedin" class="fa nav-link Name fs-5 text-light text-uppercase">
+              {{ name }}</span
+            >
+            <span *ngIf="!loggedin" class="fa nav-link" routerLink="/login"
+              >Login</span
+            >
+          </li>
+          <li *ngIf="loggedin" class="m-2">
+            <a
+              class="fa fa-shopping-cart text-light fs-4"
+              aria-hidden="true"
+              routerLink="/shoppingcart"
+            >
+              Shopping Cart</a
+            >
+          </li>
+          <li class="nav-item ms-2">
+            <a
+              *ngIf="loggedin"
+              class="fa nav-link link-danger"
+              (click)="logout()"
+              >Logout</a
+            >
+            <a *ngIf="!loggedin" class="fa nav-link" routerLink="registration"
+              >Register</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <ng-container *ngIf="cartItems.length<=0">
+    <div class="container mt-5">
+      <div class="card">
+        <h5 class="card-title">My Cart</h5>
+      </div>
+      <div class="center">
+        <img src="" alt="" />
+        <h4>Your Cart is Empty!</h4>
+        <h6>Add item to your cart</h6>
+        <button class="btn btn-primary" routerLink="">Shop Now</button>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="cartItems.length>0">
+    <div class="container mt-5">
+      <div class="card-table">
+        <div class="card-product">
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th>Sr.No</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Price</th>
+                <th>Discount</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of cartItems; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ item.product.name }}</td>
+                <td>
+                  <img
+                    width="50px"
+                    height="60px"
+                    [src]="item.product.image"
+                    alt=""
+                  />
+                </td>
+                <td>Rs. {{ item.product.price }}</td>
+                <td>Rs. {{ item.product.discount }}</td>
+                <td>
+                  <button class="btn" (click)="decreaseQuantity(item.id,item)">
+                    <i class="fa fa-minus-circle"></i>
+                  </button>
+                  {{ item.addedQuantity }}
+                  <button class="btn" (click)="increaseQuantity(item.id,item)">
+                    <i class="fa fa-plus-circle"></i>
+                  </button>
+                </td>
+                <td>
+                  Rs.
+                  {{
+                    item.addedQuantity *
+                      (item.product.price - item.product.discount)
+                  }}
+                </td>
+                <td>
+                  <button class="btn btn-danger">
+                    <i class="fa fa-trash" (click)="removeItem(item.id)"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="6"></td>
+                <td><strong>Total Amount To Be Paid</strong></td>
+                <td class="d-flex flex-row justify-content-evenly">
+                  <strong>Rs. {{ calculateAmount() }}</strong>
+                  <button class="btn btn-primary" (click)="placeOrder()">Place Order</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

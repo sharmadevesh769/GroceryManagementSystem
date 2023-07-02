@@ -1,0 +1,17 @@
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\bin\Debug\net5.0\Business.deps.json
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\bin\Debug\net5.0\Business.dll
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\bin\Debug\net5.0\ref\Business.dll
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\bin\Debug\net5.0\Business.pdb
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\Business.dll
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\ref\Business.dll
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\Business.pdb
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\bin\Debug\net5.0\DAL.dll
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\bin\Debug\net5.0\Shared.dll
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\bin\Debug\net5.0\DAL.pdb
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\bin\Debug\net5.0\Shared.pdb
+C:\Users\deveshsharma02\Desktop\GroceryManagement\BackEnd\GroceryBackend\Business\obj\Debug\net5.0\Business.csproj.CopyComplete

@@ -1,0 +1,17 @@
+E:\GroceryManagement\Grocery_Backend\DAL\bin\Debug\net7.0\DAL.deps.json
+E:\GroceryManagement\Grocery_Backend\DAL\bin\Debug\net7.0\DAL.runtimeconfig.json
+E:\GroceryManagement\Grocery_Backend\DAL\bin\Debug\net7.0\DAL.dll
+E:\GroceryManagement\Grocery_Backend\DAL\bin\Debug\net7.0\DAL.pdb
+E:\GroceryManagement\Grocery_Backend\DAL\bin\Debug\net7.0\Shared.dll
+E:\GroceryManagement\Grocery_Backend\DAL\bin\Debug\net7.0\Shared.pdb
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.csproj.AssemblyReference.cache
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.AssemblyInfoInputs.cache
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.AssemblyInfo.cs
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.csproj.CoreCompileInputs.cache
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.csproj.CopyComplete
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.dll
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\refint\DAL.dll
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.pdb
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\DAL.genruntimeconfig.cache
+E:\GroceryManagement\Grocery_Backend\DAL\obj\Debug\net7.0\ref\DAL.dll

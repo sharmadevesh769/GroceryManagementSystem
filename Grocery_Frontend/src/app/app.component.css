@@ -1,0 +1,13 @@
+.router-outlet{
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+ background: #172D13;
+}
+.navbar{
+  background: #646C79;
+}
+
+.navbar a{
+  text-decoration: none;
+}

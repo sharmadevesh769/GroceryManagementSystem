@@ -1,0 +1,154 @@
+<div class="outer">
+  
+
+  <div class="container my-5 d-flex flex-column">
+    <div>
+      <div class="d-flex flex-row m-5">
+        <input
+          class="form-control me-2 w-"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          [(ngModel)]="searchTerm"
+          (input)="search()"
+        />
+
+        <div class="d-flex align-items-center">
+          <select
+            class="form-select"
+            id="category"
+            name="category"
+            [(ngModel)]="selectedCategory"
+            (change)="loadAllProducts()"
+          >
+            <option value="" selected>ALL</option>
+            <option value="Fruit">Fruit</option>
+            <option value="Vegetable">Vegetable</option>
+            <option value="MilkProduct">Milk Product</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div
+      *ngIf="products && products.length > 0 && role !== 'Seller'"
+      class="row row-cols-1 row-cols-md-4 card-display"
+    >
+      <div
+        *ngFor="let Product of products | filter : searchTerm : 'name'"
+        class="col mb-4 hover"
+      >
+        <div class="card">
+          <div class="container">
+            <div class="aspect-ratio-container">
+              <img
+                src="{{ Product.image }}"
+                class="card-img-top"
+                alt="Image Not Found"
+              />
+            </div>
+          </div>
+          <div class="card-title">
+            <h5 class="card-title m-1 text-center">{{ Product.name }}</h5>
+          </div>
+          <div class="card-body overflow-y-scroll">
+            <p class="card-text">
+              {{ Product.description | slice : 0 : 50 }}....
+            </p>
+          </div>
+          <div class="w-auto m-2 d-flex flex-column align-items-center">
+            <div *ngIf="Product.quantity > 0">
+              <p class="card-text price">Rs. {{ Product.price }}</p>
+              <div class="viewBtn" *ngIf="role !== 'Seller'">
+                <a [routerLink]="['/viewProduct', Product.id]" class="btn"
+                  >View</a
+                >
+              </div>
+            </div>
+            <div
+              *ngIf="Product.quantity <= 0"
+              class="w-auto m-2 d-flex flex-column align-items-center"
+            >
+              <div>
+                <h3>Out of Stock!</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div
+      *ngIf="products && sellerProducts.length > 0 && role === 'Seller'"
+      class="row row-cols-1 row-cols-md-4 card-display"
+    >
+      <div
+        *ngFor="let Product of sellerProducts | filter : searchTerm : 'name'"
+        class="col mb-4 hover"
+      >
+        <div class="card">
+          <div class="container">
+            <div class="aspect-ratio-container">
+              <img
+                src="{{ Product.image }}"
+                class="card-img-top"
+                alt="Image Not Found"
+              />
+            </div>
+          </div>
+          <div class="card-title">
+            <h5 class="card-title m-1 text-center">{{ Product.name }}</h5>
+          </div>
+          <div class="card-body overflow-y-scroll">
+            <p class="card-text">
+              {{ Product.description | slice : 0 : 50 }}....
+            </p>
+          </div>
+          <div class="w-auto m-2 d-flex flex-column align-items-center">
+            <div>
+              <p class="card-text price">Rs. {{ Product.price }}</p>
+              <div class="viewBtn" *ngIf="role === 'Seller'">
+                <a [routerLink]="['/edit', Product.id]" class="btn"
+                  >View</a
+                >
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <span class="fs-2 text-light" *ngIf="!products || products.length <= 0"
+      >Sorry there's nothing to buy...</span
+    >
+
+
+    <div *ngIf="totalPages > 1" class="text-center">
+      <nav aria-label="Pagination">
+        <ul class="pagination justify-content-center">
+          <li class="page-item" [class.disabled]="pageNumber === 1">
+            <a class="page-link" (click)="onPageChange(pageNumber - 1)" aria-label="Previous">
+              <span class="fs-5" aria-hidden="true">&laquo; Previous</span>
+            </a>
+          </li>
+          <ng-container *ngFor="let page of paginationArray">
+            <li class="page-item" [class.active]="pageNumber === page" *ngIf="page <= totalPages">
+              <a class="page-link fs-5" (click)="onPageChange(page)">{{ page }}</a>
+            </li>
+          </ng-container>
+          <li class="page-item" [class.disabled]="pageNumber === totalPages">
+            <a class="page-link" (click)="onPageChange(pageNumber + 1)" aria-label="Next">
+              <span class="fs-5" aria-hidden="true">&raquo; Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+  </div>
+</div>

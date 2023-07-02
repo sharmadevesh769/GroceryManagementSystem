@@ -1,0 +1,49 @@
+<div class="outer">
+
+  <ng-container *ngIf="Orders.length <= 0">
+    <div class="container mt-5">
+      <div class="card">
+        <h5 class="card-title">My Orders</h5>
+      </div>
+      <div class="center">
+        <img src="" alt="" />
+        <h4>No Orders to Show</h4>
+        <button class="btn btn-primary" routerLink="">Shop Now</button>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="Orders.length > 0">
+    <div class="container my-5 w-50">
+      <div class="card-table">
+        <div *ngFor="let item of Orders" class="card-product">
+
+          <div class="card text-bg-light d-flex flex-row h-75">
+            <div class="w-25 m-3">
+              <img
+              src="{{ item.product.image }}"
+              class="bd-placeholder-img bd-placeholder-img-lg card-img"
+              width="100%"
+              height="100%"
+              alt="Image Not Available"
+              aria-label="Placeholder: Card image"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            />
+            </div>
+
+            <div class=" w-75 ms-5 d-flex flex-column">
+              <h5 class="card-title mb-3"><strong class="text-uppercase fs-3">{{item.product.name}}</strong></h5>
+              <small class="text-info mb-2"><strong> OrderId: {{item.orderId}} </strong></small>
+              <p class="card-text">
+                {{item.productQuantity}} Items
+              </p>
+              <p class="card-text"><small>{{item.orderDate | date: 'MM/dd/yyyy'}}</small></p>
+              <p class="card-text ms-auto"><strong class="fs-4">RS. {{item.totalAmount}}</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

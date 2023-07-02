@@ -1,0 +1,17 @@
+E:\GroceryManagement\Grocery_Backend\Business\bin\Debug\net7.0\Business.deps.json
+E:\GroceryManagement\Grocery_Backend\Business\bin\Debug\net7.0\Business.dll
+E:\GroceryManagement\Grocery_Backend\Business\bin\Debug\net7.0\Business.pdb
+E:\GroceryManagement\Grocery_Backend\Business\bin\Debug\net7.0\DAL.dll
+E:\GroceryManagement\Grocery_Backend\Business\bin\Debug\net7.0\Shared.dll
+E:\GroceryManagement\Grocery_Backend\Business\bin\Debug\net7.0\DAL.pdb
+E:\GroceryManagement\Grocery_Backend\Business\bin\Debug\net7.0\Shared.pdb
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\Business.csproj.AssemblyReference.cache
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\Business.AssemblyInfoInputs.cache
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\Business.AssemblyInfo.cs
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\Business.csproj.CoreCompileInputs.cache
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\Business.csproj.CopyComplete
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\Business.dll
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\refint\Business.dll
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\Business.pdb
+E:\GroceryManagement\Grocery_Backend\Business\obj\Debug\net7.0\ref\Business.dll

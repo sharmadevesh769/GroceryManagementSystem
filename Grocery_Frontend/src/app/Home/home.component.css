@@ -1,0 +1,67 @@
+
+.outer{
+  max-height: 100%;
+  min-height: 100vh;
+  /* background: linear-gradient(to top, #c9c9ff 50%, #6363f6); */
+  background: #172D13;
+
+}
+.navbar{
+  background: #646C79;
+}
+
+.btn{
+  background: #646C79;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.card:hover {
+  box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+.card-img-top{
+  max-height: 180px;
+  max-width: 300px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .card{
+    height: auto;
+    width: 100%;
+  }
+}
+.card-body::-webkit-scrollbar{
+  display: none;
+}
+.card-title{
+  color: #00539C;
+  text-transform: uppercase;
+  padding: 8px;
+  font-weight: bold;
+}
+.price{
+  color: black;
+  font-weight: bold;
+}
+.Name{
+  text-transform: uppercase;
+}
+a{
+  text-decoration: none;
+}
+
